@@ -34,6 +34,9 @@ wpAd.CustomCover = (function($){
       clickTrackerEsc: '',
       clickTag: '',
 
+      addCloseButton: true,
+      closeButtonColor: '#fff',
+
       onInteractionConfig: {
         // Any values that are passed in to config can be passed in here to tweak the execution to
         // display a different creative on replay/manual.
@@ -101,7 +104,9 @@ wpAd.CustomCover = (function($){
       this.config.creativeType = builders[this.config.creativeType] ? this.config.creativeType : 'image';
       this.creativeCode = this[builders[this.config.creativeType]].call(this);
       this.$creativeContainer.append(this.creativeCode);
-      this.addCloseButton();
+      if(this.config.addCloseButton){
+        this.addCloseButton();
+      }
     },
 
     buildImageCreative: function(){
@@ -150,7 +155,9 @@ wpAd.CustomCover = (function($){
 
     addCloseButton: function(){
       var root = this;
-      this.closeBtn = $('<span>close [x]</span>').addClass('customcover-closebtn').prependTo(this.$creativeContainer)
+      this.closeBtn = $('<span>close [x]</span>').addClass('customcover-closebtn').css({
+        color: root.config.closeButtonColor
+      }).prependTo(this.$creativeContainer)
       .on('click', function(){
         $(this).off('click');
         root.collapse();

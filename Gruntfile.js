@@ -105,7 +105,9 @@ module.exports = function (grunt) {
               impressionPixel: '[%ImpressionPixel%]',
               js: 'http://js.washingtonpost.com/<%= prodPath %>/js/main.min.js',
               css: 'http://css.wpdigital.net/<%= prodPath %>/css/style.min.css',
-              jsOverrides: '[%JSOverrides%]'
+              jsOverrides: '[%JSOverrides%]',
+              addCloseButton: '[%AddCloseButton%]',
+              closeButtonColor: '[%CloseButtonColor%]'
             }
           }
         },
@@ -139,7 +141,9 @@ module.exports = function (grunt) {
               impressionPixel: '',
               js: 'js/main.min.js',
               css: 'css/style.min.css',
-              jsOverrides: ''
+              jsOverrides: '',
+              addCloseButton: true,
+              closeButtonColor: '#fff'
             }
           }
         },
