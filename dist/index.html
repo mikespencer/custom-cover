@@ -12,7 +12,6 @@
   <div class="customcover-replay-target"></div>
 </article>
 
-  <script src="js/boom.js"></script>
 <script>
   parent.jQuery || document.write('<script src="http://js.washingtonpost.com/wpost/js/combo?token=20121010232000&c=true&m=true&context=eidos&r=/jquery-1.7.1.js"><\/script>');
 </script>
@@ -27,7 +26,7 @@
     $('head', d).append('<link rel="stylesheet" href="css/style.min.css" /><script src="js/main.min.js" async><\/script>');
 
     $(function(){
-      w.wpAd.customcover = new w.wpAd.CustomCover({
+      var config = {
 
         creative: 'http://placehold.it/718x512',
         creativeType: 'image',
@@ -45,12 +44,17 @@
         clickTrackerEsc: '',
         clickTag: 'http://www.example.com',
 
-        timeOpen: 7000, //any number for auto, 0 or false for manual
+        timeOpen: 7000,
         auto: true,
         expDelay: 1000,
-        adid: parseInt('%eaid!', 10) || false
+        adid: parseInt('%eaid!', 10) || false,
+        impressionPixel: ''
 
-      });
+      };
+
+      
+
+      w.wpAd.customcover = new w.wpAd.CustomCover(config);
     });
 
   })(parent.jQuery, parent.window, parent.document);

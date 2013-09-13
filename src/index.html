@@ -19,30 +19,35 @@
     $('head', d).append('<link rel="stylesheet" href="<%= css %>" /><script src="<%= js %>" async><\/script>');
 
     $(function(){
-      w.wpAd.customcover = new w.wpAd.CustomCover({
+      var config = {
 
-        creative: 'http://placehold.it/718x512',
-        creativeType: 'image',
-        width: '718px',
-        height: '512px',
-        target: 'article.main:first div.row:first',
+        creative: '<%= creative %>',
+        creativeType: '<%= creativeType %>',
+        width: '<%= width %>',
+        height: '<%= height %>',
+        target: '<%= target %>',
 
-        replayCreative: 'http://placehold.it/300x16',
-        replayWidth: '300px',
-        replayHeight: '16px',
-        replayTarget: 'div.customcover-replay-target',
-        prependReplayCreativeToTarget: true,
+        replayCreative: '<%= replayCreative %>',
+        replayWidth: '<%= replayWidth %>',
+        replayHeight: '<%= replayHeight %>',
+        replayTarget: '<%= replayTarget %>',
+        prependReplayCreativeToTarget: <%= prependReplayCreativeToTarget %>,
 
         clickTracker: '<%= clickTracker %>',
         clickTrackerEsc: '<%= clickTrackerEsc %>',
         clickTag: '<%= clickTag %>',
 
-        timeOpen: 7000, //any number for auto, 0 or false for manual
-        auto: true,
-        expDelay: 1000,
-        adid: parseInt('%eaid!', 10) || false
+        timeOpen: <%= timeOpen %>,
+        auto: <%= auto %>,
+        expDelay: <%= expDelay %>,
+        adid: parseInt('%eaid!', 10) || false,
+        impressionPixel: '<%= impressionPixel %>'
 
-      });
+      };
+
+      <%= jsOverrides %>
+
+      w.wpAd.customcover = new w.wpAd.CustomCover(config);
     });
 
   })(parent.jQuery, parent.window, parent.document);

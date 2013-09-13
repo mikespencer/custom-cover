@@ -86,11 +86,26 @@ module.exports = function (grunt) {
             '\n\n',
           process: {
             data: {
+              creative: '[%Creative%]\' || \'[%CreativeURL%]',
+              creativeType: '[%CreativeType%]',
+              width: '[%Width%]px',
+              height: '[%Height%]px',
+              target: '[%Target%]',
+              replayCreative: '[%ReplayCreative%]\' || \'[%ReplayCreativeURL%]',
+              replayWidth: '[%ReplayWidth%]px',
+              replayHeight: '[%ReplayHeight%]px',
+              replayTarget: '[%ReplayTarget%]',
+              prependReplayCreativeToTarget: '[%PrependReplayCreativeToTarget%]',
+              timeOpen: '[%TimeOpen%]',
+              auto: '[%Auto%]',
+              expDelay: '[%ExpDelay%]',
               clickTracker: '%%CLICK_URL_UNESC%%',
               clickTrackerEsc: '%%CLICK_URL_ESC%%',
               clickTag: '%%DEST_URL%%',
+              impressionPixel: '[%ImpressionPixel%]',
               js: 'http://js.washingtonpost.com/<%= prodPath %>/js/main.min.js',
-              css: 'http://css.wpdigital.net/<%= prodPath %>/css/style.min.css'
+              css: 'http://css.wpdigital.net/<%= prodPath %>/css/style.min.css',
+              jsOverrides: '[%JSOverrides%]'
             }
           }
         },
@@ -104,11 +119,27 @@ module.exports = function (grunt) {
           footer: '\n\n</body>\n</html>',
           process: {
             data: {
+
+              creative: 'http://placehold.it/718x512',
+              creativeType: 'image',
+              width: '718px',
+              height: '512px',
+              target: 'article.main:first div.row:first',
+              replayCreative: 'http://placehold.it/300x16',
+              replayWidth: '300px',
+              replayHeight: '16px',
+              replayTarget: 'div.customcover-replay-target',
+              prependReplayCreativeToTarget: true,
               clickTracker: '',
               clickTrackerEsc: '',
               clickTag: 'http://www.example.com',
+              timeOpen: 7000,
+              auto: true,
+              expDelay: 1000,
+              impressionPixel: '',
               js: 'js/main.min.js',
-              css: 'css/style.min.css'
+              css: 'css/style.min.css',
+              jsOverrides: ''
             }
           }
         },

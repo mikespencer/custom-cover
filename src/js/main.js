@@ -44,7 +44,8 @@ wpAd.CustomCover = (function($){
       timeOpen: 7000,
       auto: true,
       expDelay: 1000,
-      adid: false
+      adid: false,
+      impressionPixel: ''
 
     }, config);
 
@@ -60,6 +61,9 @@ wpAd.CustomCover = (function($){
       } else {
         this.buildReplayCreative();
         this.placeReplayCreative();
+      }
+      if(this.config.impressionPixel){
+        this.addPixel(this.config.impressionPixel);
       }
     },
 
@@ -176,6 +180,11 @@ wpAd.CustomCover = (function($){
 
     reconfig: function(data){
       this.config = $.extend(this.config, data);
+    },
+
+    addPixel: function(url){
+      url = url.replace(/\[random\]/i, Math.floor(Math.random() * 1E5));
+      $('<img src="' + url + '" height="1" width="1" alt="" style="display:none;" />').appendTo('body');
     }
 
   };
