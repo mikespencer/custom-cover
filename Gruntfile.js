@@ -178,10 +178,10 @@ module.exports = function (grunt) {
     },
     uglify: {
       options: {
-        banner: '/* <%= grunt.template.today("yyyy-mm-dd") %> | WP ADOPS */\n',
-        sourceMap: '<%= yeoman.dist %>/js/main.map.js',
-        sourceMapRoot: '../../',
-        sourceMappingURL: 'js/main.map.js'
+        banner: '/* <%= grunt.template.today("yyyy-mm-dd") %> | WP ADOPS */\n'
+        //sourceMap: '<%= yeoman.dist %>/js/main.map.js',
+        //sourceMapRoot: '../../',
+        //sourceMappingURL: 'js/main.map.js'
       },
       main: {
         src: '<%= yeoman.app %>/js/main.js',
