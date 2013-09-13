@@ -1,0 +1,98 @@
+/* line 52, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.customcover div, .customcover span, .customcover applet, .customcover object, .customcover iframe,
+.customcover h1, .customcover h2, .customcover h3, .customcover h4, .customcover h5, .customcover h6, .customcover p, .customcover blockquote, .customcover pre,
+.customcover a, .customcover abbr, .customcover acronym, .customcover address, .customcover big, .customcover cite, .customcover code,
+.customcover del, .customcover dfn, .customcover em, .customcover img, .customcover ins, .customcover kbd, .customcover q, .customcover s, .customcover samp,
+.customcover small, .customcover strike, .customcover strong, .customcover sub, .customcover sup, .customcover tt, .customcover var,
+.customcover b, .customcover u, .customcover i, .customcover center,
+.customcover dl, .customcover dt, .customcover dd, .customcover ol, .customcover ul, .customcover li,
+.customcover fieldset, .customcover form, .customcover label, .customcover legend,
+.customcover table, .customcover caption, .customcover tbody, .customcover tfoot, .customcover thead, .customcover tr, .customcover th, .customcover td,
+.customcover article, .customcover aside, .customcover canvas, .customcover details, .customcover embed,
+.customcover figure, .customcover figcaption, .customcover footer, .customcover header, .customcover hgroup,
+.customcover menu, .customcover nav, .customcover output, .customcover ruby, .customcover section, .customcover summary,
+.customcover time, .customcover mark, .customcover audio, .customcover video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* line 55, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.customcover table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 57, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.customcover caption, .customcover th, .customcover td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+/* line 59, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.customcover q, .customcover blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.customcover q:before, .customcover q:after, .customcover blockquote:before, .customcover blockquote:after {
+  content: "";
+  content: none;
+}
+/* line 61, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+.customcover a img {
+  border: none;
+}
+
+/* line 7, ../sass/style.sass */
+.customcover {
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 999999;
+}
+/* line 15, ../sass/style.sass */
+.customcover img, .customcover object, .customcover embed, .customcover video, .customcover iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 20, ../sass/style.sass */
+.customcover .customcover-closebtn {
+  padding: 8px;
+  text-align: right;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
+  color: white;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+}
+
+/* line 34, ../sass/style.sass */
+.customcover.collapse {
+  height: 0;
+}
+
+/* line 37, ../sass/style.sass */
+.customcover.expand {
+  height: 512px;
+  margin-bottom: 10px;
+}
+
+/* line 41, ../sass/style.sass */
+img.replay-customcover {
+  cursor: pointer;
+}

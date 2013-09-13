@@ -1,0 +1,48 @@
+<!-- AD ID: %eaid! -->
+<!-- custom-cover-template - 718x512 -->
+
+
+
+  <script src="http://js.washingtonpost.com/wp-srv/ad/public/custom-cover/dist/js/boom.js"></script>
+<script>
+  parent.jQuery || document.write('<script src="http://js.washingtonpost.com/wpost/js/combo?token=20121010232000&c=true&m=true&context=eidos&r=/jquery-1.7.1.js"><\/script>');
+</script>
+<script>
+  (function($, w, d){
+    'use strict';
+
+    if(!$){return false;}
+
+    w.wpAd = w.wpAd || {};
+
+    $('head', d).append('<link rel="stylesheet" href="http://css.wpdigital.net/wp-srv/ad/public/custom-cover/dist/css/style.min.css" /><script src="http://js.washingtonpost.com/wp-srv/ad/public/custom-cover/dist/js/main.min.js" async><\/script>');
+
+    $(function(){
+      w.wpAd.customcover = new w.wpAd.CustomCover({
+
+        creative: 'http://placehold.it/718x512',
+        creativeType: 'image',
+        width: '718px',
+        height: '512px',
+        target: 'article.main:first div.row:first',
+
+        replayCreative: 'http://placehold.it/300x16',
+        replayWidth: '300px',
+        replayHeight: '16px',
+        replayTarget: 'div.customcover-replay-target',
+        prependReplayCreativeToTarget: true,
+
+        clickTracker: '%%CLICK_URL_UNESC%%',
+        clickTrackerEsc: '%%CLICK_URL_ESC%%',
+        clickTag: '%%DEST_URL%%',
+
+        timeOpen: 7000, //any number for auto, 0 or false for manual
+        auto: true,
+        expDelay: 1000,
+        adid: parseInt('%eaid!', 10) || false
+
+      });
+    });
+
+  })(parent.jQuery, parent.window, parent.document);
+</script>

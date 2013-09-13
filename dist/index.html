@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>custom-cover-template: Test Page</title>
+</head>
+<body>
+
+<article class="main dev-element" style="width:718px;margin: 10px auto">
+  <div class="row">
+    some cotent here.
+  </div>
+  <div class="customcover-replay-target"></div>
+</article>
+
+  <script src="js/boom.js"></script>
+<script>
+  parent.jQuery || document.write('<script src="http://js.washingtonpost.com/wpost/js/combo?token=20121010232000&c=true&m=true&context=eidos&r=/jquery-1.7.1.js"><\/script>');
+</script>
+<script>
+  (function($, w, d){
+    'use strict';
+
+    if(!$){return false;}
+
+    w.wpAd = w.wpAd || {};
+
+    $('head', d).append('<link rel="stylesheet" href="css/style.min.css" /><script src="js/main.min.js" async><\/script>');
+
+    $(function(){
+      w.wpAd.customcover = new w.wpAd.CustomCover({
+
+        creative: 'http://placehold.it/718x512',
+        creativeType: 'image',
+        width: '718px',
+        height: '512px',
+        target: 'article.main:first div.row:first',
+
+        replayCreative: 'http://placehold.it/300x16',
+        replayWidth: '300px',
+        replayHeight: '16px',
+        replayTarget: 'div.customcover-replay-target',
+        prependReplayCreativeToTarget: true,
+
+        clickTracker: '',
+        clickTrackerEsc: '',
+        clickTag: 'http://www.example.com',
+
+        timeOpen: 7000, //any number for auto, 0 or false for manual
+        auto: true,
+        expDelay: 1000,
+        adid: parseInt('%eaid!', 10) || false
+
+      });
+    });
+
+  })(parent.jQuery, parent.window, parent.document);
+</script>
+
+</body>
+</html>

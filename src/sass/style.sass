@@ -1,0 +1,42 @@
+@import "compass/reset/utilities"
+@import "compass/css3"
+
+.customcover
+  @include nested-reset
+
+.customcover
+  +transition-property(height)
+  +transition-duration(0.8s)
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: 999999
+
+  img, object, embed, video, iframe
+    position: absolute
+    top: 0
+    left: 0
+
+  .customcover-closebtn
+    padding: 8px
+    text-align: right
+    text-shadow: 1px 1px black
+    cursor: pointer
+    z-index: 100
+    position: absolute
+    font-family: helvetica, arial, sans-serif
+    font-size: 13px
+    color: white
+    top: 0
+    right: 0
+    text-transform: uppercase
+
+.customcover.collapse
+  height: 0
+
+.customcover.expand
+  height: 512px
+  margin-bottom: 10px
+
+img.replay-customcover
+  cursor: pointer
