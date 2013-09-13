@@ -62,8 +62,7 @@ wpAd.CustomCover = (function($){
       if(this.config.auto){
         this.exec();
       } else {
-        this.buildReplayCreative();
-        this.placeReplayCreative();
+        this.addReplayButton();
       }
       if(this.config.impressionPixel){
         this.addPixel(this.config.impressionPixel);
