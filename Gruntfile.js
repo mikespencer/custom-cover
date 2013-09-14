@@ -107,7 +107,8 @@ module.exports = function (grunt) {
               css: 'http://css.wpdigital.net/<%= prodPath %>/css/style.min.css',
               jsOverrides: '[%JSOverrides%]',
               addCloseButton: '[%AddCloseButton%]',
-              closeButtonColor: '[%CloseButtonColor%]'
+              closeButtonCSS: '{}',
+              closeButtonText: 'close [x]'
             }
           }
         },
@@ -121,7 +122,6 @@ module.exports = function (grunt) {
           footer: '\n\n</body>\n</html>',
           process: {
             data: {
-
               creative: 'http://placehold.it/718x512',
               creativeType: 'image',
               width: '718px',
@@ -143,7 +143,8 @@ module.exports = function (grunt) {
               css: 'css/style.min.css',
               jsOverrides: '',
               addCloseButton: true,
-              closeButtonColor: '#fff'
+              closeButtonCSS: '{}',
+              closeButtonText: 'close [x]'
             }
           }
         },

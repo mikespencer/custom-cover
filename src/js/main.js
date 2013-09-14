@@ -16,7 +16,7 @@ wpAd.CustomCover = (function($){
   }
 
   function CustomCover(config){
-    this.config = $.extend({
+    this.config = $.extend(true, {
 
       creative: '',
       creativeType: 'image',
@@ -36,6 +36,8 @@ wpAd.CustomCover = (function($){
 
       addCloseButton: true,
       closeButtonColor: '#fff',
+      closeButtonCSS: {},
+      closeButtonText: 'CLOSE [x]',
 
       onInteractionConfig: {
         // Any values that are passed in to config can be passed in here to tweak the execution to
@@ -49,6 +51,7 @@ wpAd.CustomCover = (function($){
       expDelay: 1000,
       adid: false,
       impressionPixel: ''
+
 
     }, config);
 
@@ -154,13 +157,12 @@ wpAd.CustomCover = (function($){
 
     addCloseButton: function(){
       var root = this;
-      this.closeBtn = $('<span>close [x]</span>').addClass('customcover-closebtn').css({
-        color: root.config.closeButtonColor
-      }).prependTo(this.$creativeContainer)
-      .on('click', function(){
-        $(this).off('click');
-        root.collapse();
-      });
+      this.closeBtn = $('<span>' + this.config.closeButtonText + '</span>')
+        .addClass('customcover-closebtn').css(this.config.closeButtonCSS).prependTo(this.$creativeContainer)
+        .on('click', function(){
+          $(this).off('click');
+          root.collapse();
+        });
     },
 
     expand: function(){
