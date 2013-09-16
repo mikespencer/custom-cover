@@ -291,13 +291,13 @@ module.exports = function (grunt) {
       }
     });
 
-    $('img').each(function(){
+    /*$('img').each(function(){
       var src = $(this).attr('src'), newSrc;
       if(src && !/^http|^\/\/\:/.test(src)){
         newSrc = urls.img + '/' + src.replace(/^\//, '');
         $(this).attr('src', newSrc);
       }
-    });
+    });*/
 
     $('link').each(function(){
       var href = $(this).attr('href'), newHref;

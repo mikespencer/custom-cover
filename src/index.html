@@ -16,6 +16,10 @@
 
     w.wpAd = w.wpAd || {};
 
+    $.ajaxSetup({
+      cache:true
+    });
+
     $('head', d).append('<link rel="stylesheet" href="<%= css %>" /><script src="<%= js %>" async><\/script>');
 
     $(function(){
@@ -56,3 +60,6 @@
 
   })(parent.jQuery, parent.window, parent.document);
 </script>
+
+<!-- out of page impression -->
+<img src="%%VIEW_URL_UNESC%%" width="1" height="1" alt="" style="border:0;display:none;" />
