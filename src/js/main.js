@@ -27,7 +27,7 @@ wpAd.CustomCover = (function($){
       replayCreative: '',
       replayWidth: '300px',
       replayHeight: '16px',
-      replayTarget: 'div.customcover-replay-target',
+      replayTarget: '#rightflex',
       prependReplayCreativeToTarget: true,
 
       clickTracker: '',
@@ -135,18 +135,24 @@ wpAd.CustomCover = (function($){
 
     addReplayButton: function(){
       var root = this,
-        fn = this.config.prependReplayCreativeToTarget ? 'prependTo' : 'appendTo';
+        fn = this.config.prependReplayCreativeToTarget ? 'before' : 'after';
 
       this.$replayButton = $('<img />').attr({
         src: this.config.replayCreative,
         width: this.config.replayWidth,
         height: this.config.replayHeight,
         alt: 'Click here to replay advertisement.'
-      }).addClass('replay-customcover').hide()[fn](this.config.replayTarget).on('click', function(){
+      }).addClass('replay-customcover').on('click', function(){
         $(this).off('click');
         root.reconfig(root.config.onInteractionConfig);
         root.exec();
-      }).show(250);
+      }).css({
+        display: 'none'
+      });
+
+      $(this.config.replayTarget)[fn](this.$replayButton);
+      this.$replayButton.show(250);
+
     },
 
     removeReplayButton: function(){
