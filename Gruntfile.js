@@ -107,7 +107,7 @@ module.exports = function (grunt) {
               css: 'http://css.wpdigital.net/<%= prodPath %>/css/style.min.css',
               jsOverrides: '[%JSOverrides%]',
               addCloseButton: '[%AddCloseButton%]',
-              closeButtonCSS: '{}',
+              closeButtonCSS: '[%CloseButtonCSS%]',
               closeButtonText: 'close [x]'
             }
           }
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
               css: 'css/style.min.css',
               jsOverrides: '',
               addCloseButton: true,
-              closeButtonCSS: '{}',
+              closeButtonCSS: '',
               closeButtonText: 'close [x]'
             }
           }

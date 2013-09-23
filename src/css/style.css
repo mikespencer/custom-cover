@@ -1,4 +1,4 @@
-/* line 52, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 52, ../../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 .customcover div, .customcover span, .customcover applet, .customcover object, .customcover iframe,
 .customcover h1, .customcover h2, .customcover h3, .customcover h4, .customcover h5, .customcover h6, .customcover p, .customcover blockquote, .customcover pre,
 .customcover a, .customcover abbr, .customcover acronym, .customcover address, .customcover big, .customcover cite, .customcover code,
@@ -19,27 +19,27 @@
   font-size: 100%;
   vertical-align: baseline;
 }
-/* line 55, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 55, ../../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 .customcover table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 57, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 57, ../../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 .customcover caption, .customcover th, .customcover td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
-/* line 59, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 59, ../../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 .customcover q, .customcover blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 .customcover q:before, .customcover q:after, .customcover blockquote:before, .customcover blockquote:after {
   content: "";
   content: none;
 }
-/* line 61, ../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 61, ../../../../.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 .customcover a img {
   border: none;
 }
@@ -86,11 +86,11 @@
 
 /* line 37, ../sass/style.sass */
 .customcover.expand {
-  height: 512px;
+  height: 515px;
   margin-bottom: 10px;
 }
 
-/* line 41, ../sass/style.sass */
+/* line 42, ../sass/style.sass */
 img.replay-customcover {
   cursor: pointer;
 }
