@@ -108,7 +108,9 @@ module.exports = function (grunt) {
               jsOverrides: '[%JSOverrides%]',
               addCloseButton: '[%AddCloseButton%]',
               closeButtonCSS: '[%CloseButtonCSS%]',
-              closeButtonText: 'close [x]'
+              closeButtonText: 'close [x]',
+              flashBackup: '[%FlashBackup%]',
+              minFlashVer: '[%MinFlashVer%]'
             }
           }
         },
@@ -147,7 +149,9 @@ module.exports = function (grunt) {
               jsOverrides: '',
               addCloseButton: true,
               closeButtonCSS: '',
-              closeButtonText: 'close [x]'
+              closeButtonText: 'close [x]',
+              flashBackup: 'http://placehold.it/718x512',
+              minFlashVer: 9
             }
           }
         },

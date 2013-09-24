@@ -29,6 +29,8 @@ wpAd.CustomCover = (function($){
       replayHeight: '16px',
       replayTarget: '#rightflex',
       prependReplayCreativeToTarget: true,
+      flashBackup: '',
+      minFlashVer: 9,
 
       clickTracker: '',
       clickTrackerEsc: '',
@@ -61,7 +63,20 @@ wpAd.CustomCover = (function($){
 
   CustomCover.prototype = {
 
+    getFlashVer: function(){
+      var i,a,o,p,s="Shockwave",f="Flash",t=" 2.0",u=s+" "+f,v=s+f+".",rSW=new RegExp("^"+u+" (\\d+)");
+      if((o=navigator.plugins)&&(p=o[u]||o[u+t])&&(a=p.description.match(rSW)))return a[1];
+      else if(!!(ActiveXObject))for(i=10;i>0;i--)try{if(!!(new ActiveXObject(v+v+i)))return i;}catch(e){}
+      return 0;
+    },
+
     init: function(){
+
+      if(this.config.creativeType === 'flash' && this.getFlashVer() < this.config.minFlashVer){
+        this.config.creativeType = 'image';
+        this.config.creative = this.config.flashBackup;
+      }
+
       if(this.config.auto){
         this.exec();
       } else {
@@ -103,6 +118,7 @@ wpAd.CustomCover = (function($){
         'iframe': 'buildIframeCreative',
         'video': 'buildVideoCreative'
       };
+
       this.config.creativeType = builders[this.config.creativeType] ? this.config.creativeType : 'image';
       this.creativeCode = this[builders[this.config.creativeType]].call(this);
       this.$creativeContainer.append(this.creativeCode);
