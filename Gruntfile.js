@@ -122,12 +122,15 @@ module.exports = function (grunt) {
           footer: '\n\n</body>\n</html>',
           process: {
             data: {
-              creative: 'http://placehold.it/718x512',
-              creativeType: 'image',
+              //creative: 'http://placehold.it/718x512',
+              creative: 'http://www.washingtonpost.com/wp-srv/ad/public/static/22154/Prudential_201309_vidCustomCover.swf',
+              //creativeType: 'image',
+              creativeType: 'flash',
               width: '718px',
               height: '512px',
               target: 'article.main:first div.row:first',
-              replayCreative: 'http://placehold.it/300x16',
+              replayCreative: 'http://www.washingtonpost.com/wp-srv/ad/public/static/22154/PRU_CustomCover_ReplayTile.png',
+              //replayCreative: 'http://placehold.it/300x16',
               replayWidth: '300px',
               replayHeight: '16px',
               replayTarget: 'div.customcover-replay-target',

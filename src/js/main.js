@@ -118,7 +118,35 @@ wpAd.CustomCover = (function($){
     },
 
     buildFlashCreative: function(){
-      return '';
+      var flashvars = this.getFlashVars();
+      return '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="' + this.config.width + '" height="' + this.config.height + '" id="customcoverswf" style="outline:none;">' +
+        '<param name="movie" value="' + this.config.creative + '" />' +
+        '<param name="quality" value="high" />' +
+        '<param name="bgcolor" value="#FFFFFF" />' +
+        '<param name="play" value="true" />' +
+        '<param name="wmode" value="opaque" />' +
+        '<param name="allowScriptAccess" value="always" />' +
+        '<param name="flashvars" value="' + flashvars + '" />' +
+        '<!--[if !IE]>-->' +
+          '<object type="application/x-shockwave-flash" data="' + this.config.creative + '" width="' + this.config.width + '" height="' + this.config.height + '" id="customcoverswf" style="outline:none;">' +
+            '<param name="movie" value="' + this.config.creative + '" />' +
+            '<param name="quality" value="high" />' +
+            '<param name="bgcolor" value="#FFFFFF" />' +
+            '<param name="play" value="true" />' +
+            '<param name="wmode" value="opaque" />' +
+            '<param name="allowScriptAccess" value="always" />' +
+            '<param name="flashvars" value="' + flashvars + '" />' +
+          '</object>' +
+        '<!--<![endif]-->' +
+      '</object>';
+    },
+
+    getFlashVars: function(){
+      return [
+        'clickTag=' + this.config.clickTrackerEsc + this.config.clickTag,
+        'mute=' + (this.config.auto ? 'true' : 'false'),
+        'autoplay=true'
+      ].join('&');
     },
 
     buildIframeCreative: function(){
