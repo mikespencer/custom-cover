@@ -183,19 +183,20 @@ wpAd.CustomCover = (function($){
 
       this.$replayButton = $('<img />').attr({
         src: this.config.replayCreative,
-        width: this.config.replayWidth,
-        height: this.config.replayHeight,
+        width: parseInt(this.config.replayWidth, 10),
+        height: parseInt(this.config.replayHeight, 10),
         alt: 'Click here to replay advertisement.'
       }).addClass('replay-customcover').on('click', function(){
         $(this).off('click');
         root.reconfig(root.config.onInteractionConfig);
         root.exec();
       }).css({
+        margin: '0 auto',
         display: 'none'
       });
 
       $(this.config.replayTarget)[fn](this.$replayButton);
-      this.$replayButton.show(250);
+      this.$replayButton.slideDown(250);
 
     },
 

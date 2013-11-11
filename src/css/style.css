@@ -93,4 +93,5 @@
 /* line 42, ../sass/style.sass */
 img.replay-customcover {
   cursor: pointer;
+  display: block;
 }
